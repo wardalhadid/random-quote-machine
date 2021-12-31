@@ -33,24 +33,26 @@ function App() {
     quotesArray();
   };
   return (
-    <div style={{background: bgColor}} className='main'>
+    <div style={{background: bgColor}} className='main' id="quote-box">
     <div className="container">
       <div>
-        <p style = {{color: bgColor}}> <i class="fa-duotone fa-quote-left fa"> </i>
+        <p style = {{color: bgColor}} id="text"> <i class="fa-duotone fa-quote-left fa"> </i>
           {` ${quote} `} 
         <i class="fa-duotone fa-quote-right fa"></i> </p>
-        <p className="author" style={{color: bgColor}}> - {author}  </p>
+        <p className="author" style={{color: bgColor}} id="author" > - {author}  </p>
 			</div>
       <div className="buttons">
         <a
          href= {"https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text=" + quote + "- " + author}
           target="_noopener"
           style={{color: bgColor}}
+          id="tweet-quote"
           >
          <i className='fab fa-twitter fa-2x'></i> 
         </a>
 			<button
       className='btn btn-dark'
+      id="new-quote"
        onClick = {handleOnClick}
       >New Quote </button>
 			</div>
